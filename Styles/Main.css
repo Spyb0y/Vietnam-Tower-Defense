@@ -1,0 +1,16 @@
+﻿#game
+{
+    background-color:aqua;
+}
+.screen #main-menu
+{
+    background-color:black;
+}
+.logo 
+{
+    font-family :'Black Ops One', cursive;
+    font-size : 3em;
+    line-height : 0.9em;
+    margin : 0;
+    text-align : center;
+}
