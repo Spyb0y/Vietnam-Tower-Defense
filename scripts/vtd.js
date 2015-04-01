@@ -1,5 +1,5 @@
-var jewel = (function() {
-    var settings = {
+var vtd = (function() {
+   /* var settings = {
         rows : 8,
         cols : 8,
         baseScore : 100,
@@ -22,14 +22,14 @@ var jewel = (function() {
             LEFT_STICK_LEFT: "moveLeft",
             LEFT_STICK_RIGHT: "moveRight"
         }
-    };
+    };*/
 
-    var scriptQueue = [],
+    /*var scriptQueue = [],
         numResourcesLoaded = 0,
         numResources = 0,
-        executeRunning = false;
+        executeRunning = false;*/
 
-    function executeScriptQueue() {
+    /*function executeScriptQueue() {
         var next = scriptQueue[0],
             first, script;
         if (next && next.loaded) {
@@ -50,14 +50,14 @@ var jewel = (function() {
         } else {
             executeRunning = false;
         }
-    }
+    }*/
 
-    function getLoadProgress() {
+    /*function getLoadProgress() {
         return numResourcesLoaded / numResources;
-    }
+    }*/
 
     function load(src, callback) {
-        var image, queueEntry;
+        /*var image, queueEntry;
         numResources++;
 
         // add this resource to the execution queue
@@ -76,14 +76,15 @@ var jewel = (function() {
                 executeScriptQueue();
             }
         };
-        image.src = src;
+        image.src = src;*/
     }
 
-    function preload(src) {
+    /*function preload(src) {
         var image = new Image();
         image.src = src;
-    }
+    }*/
     
+    /*
     // hide the active screen (if any) and show the screen
     // with the specified id
     function showScreen(screenId) {
@@ -103,18 +104,18 @@ var jewel = (function() {
         dom.addClass(screen, "active");
         // run the screen module
         jewel.screens[screenId].run();
-    }
+    }*/
 
-    function isStandalone() {
+    /*function isStandalone() {
         return (window.navigator.standalone !== false);
-    }
+    }*/
 
-    function hasWebWorkers() {
+    /*function hasWebWorkers() {
         return ("Worker" in window);
-    }
+    }*/
 
     function setup() {
-        // hide the address bar on Android devices
+        /*// hide the address bar on Android devices
         if (/Android/.test(navigator.userAgent)) {
             jewel.dom.$("html")[0].style.height = "200%";
             setTimeout(function() {
@@ -132,19 +133,19 @@ var jewel = (function() {
             showScreen("splash-screen");
         } else {
             showScreen("install-screen");
-        }
+        }*/
         
     }
 
     return {
-        getLoadProgress: getLoadProgress,
-        hasWebWorkers: hasWebWorkers,
-        isStandalone: isStandalone,
-        preload: preload,
+        //getLoadProgress: getLoadProgress,
+        //hasWebWorkers: hasWebWorkers,
+        //isStandalone: isStandalone,
+        //preload: preload,
         load: load,
         setup: setup,
-        showScreen : showScreen,
-        settings: settings,
-        screens: {}
+        //showScreen : showScreen,
+        //settings: settings,
+        //screens: {}
     };
 })();
