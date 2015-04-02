@@ -24,12 +24,12 @@ var vtd = (function() {
         }
     };*/
 
-    /*var scriptQueue = [],
+    var scriptQueue = [],
         numResourcesLoaded = 0,
         numResources = 0,
-        executeRunning = false;*/
+        executeRunning = false;
 
-    /*function executeScriptQueue() {
+    function executeScriptQueue() {
         var next = scriptQueue[0],
             first, script;
         if (next && next.loaded) {
@@ -50,14 +50,14 @@ var vtd = (function() {
         } else {
             executeRunning = false;
         }
-    }*/
+    }
 
     /*function getLoadProgress() {
         return numResourcesLoaded / numResources;
     }*/
 
     function load(src, callback) {
-        /*var image, queueEntry;
+        var image, queueEntry;
         numResources++;
 
         // add this resource to the execution queue
@@ -76,7 +76,7 @@ var vtd = (function() {
                 executeScriptQueue();
             }
         };
-        image.src = src;*/
+        image.src = src;
     }
 
     /*function preload(src) {
