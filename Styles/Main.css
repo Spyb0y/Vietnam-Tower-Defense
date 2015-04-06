@@ -11,28 +11,14 @@
     position : absolute;
     left : 0;
     top : 0;
-    width : 8em;
-    height : 12em;
+    width : 17em;
+    height : 15em;
     font-family : Geo;
     color : rgb(200,200,100);
     font-size : 40px;
     background-color: rgb(60,60,40);
-    background-size : 10px 10px;
-    background-image : 
-        -webkit-linear-gradient(45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%),
-        -webkit-linear-gradient(-45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%);
-    background-image : 
-        -moz-linear-gradient(45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%),
-        -moz-linear-gradient(-45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%);
-    background-image : 
-        -ms-linear-gradient(45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%),
-        -ms-linear-gradient(-45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%);
-    background-image : 
-        -o-linear-gradient(45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%),
-        -o-linear-gradient(-45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%);
-    background-image : 
-        linear-gradient(45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%),
-        linear-gradient(-45deg, transparent 0%, rgb(20,20,20) 25%, transparent 50%, rgb(20,20,20) 75%, transparent 100%);
+    background-size : 750px 650px;
+    background-image: url("../Assets/Main-Screen.jpg") /*Place Holder until better one is found*/
 }
 
 #game .screen.active {
@@ -40,7 +26,8 @@
 }
 #splash-screen {
     text-align : center;
-    padding-top : 2.5em;
+    padding-top : 1.5em;
+  
 }
 #splash-screen .continue {
     cursor : pointer;
@@ -52,8 +39,8 @@
     font-family : 'Black Ops One';
     font-size : 1.5em;
     line-height : 0.9em;
-    text-shadow : 0.03em  0.03em  0.03em rgb(255,255,0),
-                 -0.03em -0.03em  0.03em rgb(255,255,0),
+    text-shadow : 0.03em  0.03em  0.03em rgb(0,0,0),
+                 -0.03em -0.03em  0.03em rgb(0,0,0),
                   0.10em  0.15em  0.15em rgb(0,0,0);
     margin : 0;
     text-align : center;
@@ -67,7 +54,7 @@
 
 ul.Menu {
     text-align : center;
-    padding : 0;
+    padding-top : em;
     margin : 0;
     list-style:none;
 }
