@@ -54,9 +54,9 @@
 
 ul.Menu {
     text-align : center;
-    padding-top : em;
+    padding-top : 1em;
     margin : 0;
-    list-style:none;
+    list-style: none;
 }
 ul.Menu li {
     margin : 0.8em 0;
@@ -80,4 +80,12 @@ ul.Menu li button:hover {
 ul.Menu li button:active {
     color : rgb(255,255,0);
     background : rgb(30,40,0);
+}
+/*Map Selection*/
+.screen button
+{
+    background-image: url(../Assets/map.jpg);
+    width : 21em;
+    height : 13em;
+    padding-bottom: 1em;
 }
