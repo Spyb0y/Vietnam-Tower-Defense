@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <script>
         window.addEventListener("load", function () {
-            vtd.load("scripts/dom.js", vtd.setup);
+            vtd.load("scripts/dom.js");
             if (vtd.isStandalone()) {
                 vtd.load("scripts/screen.splash.js");
-                vtd.load("scripts/screen.main-menu.js", vtd.setup);
+                vtd.load("scripts/screen.main-menu.js",vtd.setup);
             } else {
                 vtd.load("scripts/screen.install.js", vtd.setup);
             }
@@ -22,16 +22,23 @@
 
     
     <div id="game">
-        <div class="screen" id="splash-screen"></div>
+        <div class="screen" id="splash-screen">
             <h1 class="logo">Veitnam Tower Defense</h1>
             <span class="continue">Click to continue</span>
+        </div>
         <div class="screen" id="main-menu">
+        <!--<div class="screen" id="main-menu">-->
             <h2 class="logo"> Vietnam Tower <br /> Defense</h2>
             <ul class="Menu">
-                <li><button name="game-screen">Play</button> 
-                <li><button name="options">Options</button>                
-                <li><button name="exit">Exit</button>
+                <li><button name="game-screen" onclick="">Play</button> 
+                <li><button name="options"onclick="">Options</button>                
+                <li><button name="exit"onclick="">Exit</button>
             </ul>
+        <!--</div>-->
+       
+         <!--<div class="screen" id="map-select">
+             <button name="Map" onclick=""></button>-->
+            
         </div>
         <div class="screen" id="settings"></div>
         <div class="screen" id="difficulty"></div>
