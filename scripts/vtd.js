@@ -1,5 +1,5 @@
 var vtd = (function() {
-   /* var settings = {
+    /*var settings = {
         rows : 8,
         cols : 8,
         baseScore : 100,
@@ -84,40 +84,38 @@ var vtd = (function() {
         image.src = src;
     }*/
     
-    /*
+    
     // hide the active screen (if any) and show the screen
     // with the specified id
     function showScreen(screenId) {
-        var dom = jewel.dom,
+        var dom = vtd.dom,
             $ = dom.$,
             activeScreen = $("#game .screen.active")[0],
             screen = $("#" + screenId)[0];
-        if (!jewel.screens[screenId]) {
+        if (!vtd.screens[screenId]) {
             alert("This module is not implemented yet!");
             return;
         }
         if (activeScreen) {
             dom.removeClass(activeScreen, "active");
         }
-        // run the screen module
-        jewel.screens[screenId].run();
         dom.addClass(screen, "active");
         // run the screen module
-        jewel.screens[screenId].run();
-    }*/
+        vtd.screens[screenId].run();
+    }
 
-    /*function isStandalone() {
+    function isStandalone() {
         return (window.navigator.standalone !== false);
-    }*/
+    }
 
     /*function hasWebWorkers() {
         return ("Worker" in window);
     }*/
 
     function setup() {
-        /*// hide the address bar on Android devices
+        // hide the address bar on Android devices
         if (/Android/.test(navigator.userAgent)) {
-            jewel.dom.$("html")[0].style.height = "200%";
+            vtd.dom.$("html")[0].style.height = "200%";
             setTimeout(function() {
                 window.scrollTo(0, 1);
             }, 0);
@@ -125,7 +123,7 @@ var vtd = (function() {
 
         // disable native touchmove behavior to 
         // prevent overscroll
-        jewel.dom.bind(document, "touchmove", function(event) {
+        vtd.dom.bind(document, "touchmove", function(event) {
             event.preventDefault();
         });
 
@@ -133,19 +131,19 @@ var vtd = (function() {
             showScreen("splash-screen");
         } else {
             showScreen("install-screen");
-        }*/
+        }
         
     }
 
     return {
         //getLoadProgress: getLoadProgress,
         //hasWebWorkers: hasWebWorkers,
-        //isStandalone: isStandalone,
+        isStandalone: isStandalone,
         //preload: preload,
         load: load,
         setup: setup,
-        //showScreen : showScreen,
+        showScreen : showScreen,
         //settings: settings,
-        //screens: {}
+        screens: {}
     };
 })();
