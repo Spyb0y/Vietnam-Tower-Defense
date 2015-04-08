@@ -123,9 +123,9 @@ var vtd = (function() {
 
         // disable native touchmove behavior to 
         // prevent overscroll
-        vtd.dom.bind(document, "touchmove", function(event) {
+        /*vtd.dom.bind(document, "touchmove", function(event) {
             event.preventDefault();
-        });
+        });*/
 
         if (isStandalone()) {
             showScreen("splash-screen");
