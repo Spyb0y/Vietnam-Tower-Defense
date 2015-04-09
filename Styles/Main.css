@@ -21,6 +21,13 @@
     background-image: url("../Assets/Main-Screen.jpg") /*Place Holder until better one is found*/
 }
 
+#game .screen {
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    display : none;
+    z-index : 10;
+}
 #game .screen.active {
     display : block;
 }
@@ -52,16 +59,16 @@
     padding-top : 1em;
 }
 
-ul.Menu {
+ul.menu {
     text-align : center;
     padding-top : 1em;
     margin : 0;
     list-style: none;
 }
-ul.Menu li {
+ul.menu li {
     margin : 0.8em 0;
 }
-ul.Menu li button {
+ul.menu li button {
     font-family : 'Black Ops One', sans-serif;
     font-size : 0.6em;
     color : rgb(100,120,0);
@@ -74,10 +81,10 @@ ul.Menu li button {
     -moz-box-shadow : 0.2em 0.2em 0.3em rgb(0,0,0);
     box-shadow : 0.2em 0.2em 0.3em rgb(0,0,0);
 }
-ul.Menu li button:hover {
+ul.menu li button:hover {
     background : rgb(30,40,0);
 }
-ul.Menu li button:active {
+ul.menu li button:active {
     color : rgb(255,255,0);
     background : rgb(30,40,0);
 }
