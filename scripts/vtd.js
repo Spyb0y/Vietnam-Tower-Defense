@@ -52,9 +52,9 @@ var vtd = (function() {
         }
     }
 
-    /*function getLoadProgress() {
+    function getLoadProgress() {
         return numResourcesLoaded / numResources;
-    }*/
+    }
 
     function load(src, callback) {
         var image, queueEntry;
@@ -79,10 +79,10 @@ var vtd = (function() {
         image.src = src;
     }
 
-    /*function preload(src) {
+    function preload(src) {
         var image = new Image();
         image.src = src;
-    }*/
+    }
     
     
     // hide the active screen (if any) and show the screen
@@ -108,9 +108,9 @@ var vtd = (function() {
         return (window.navigator.standalone !== false);
     }
 
-    /*function hasWebWorkers() {
+    function hasWebWorkers() {
         return ("Worker" in window);
-    }*/
+    }
 
     function setup() {
         // hide the address bar on Android devices
@@ -136,10 +136,10 @@ var vtd = (function() {
     }
 
     return {
-        //getLoadProgress: getLoadProgress,
-        //hasWebWorkers: hasWebWorkers,
+        getLoadProgress: getLoadProgress,
+        hasWebWorkers: hasWebWorkers,
         isStandalone: isStandalone,
-        //preload: preload,
+        preload: preload,
         load: load,
         setup: setup,
         showScreen : showScreen,
