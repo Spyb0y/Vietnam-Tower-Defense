@@ -6,6 +6,21 @@
         dom.bind("#difficulty ul.menu", "click", function (e) {
             if (e.target.nodeName.toLowerCase() === "button") {
                 var action = e.target.getAttribute("name");
+                if (action === "easy")
+                {
+                    action = "map-select";
+                    vtd.settings.difficultyLevel = 1;
+                }
+                if (action === "medium")
+                {
+                    action = "map-select";
+                    vtd.settings.difficultyLevel = 2;
+                }
+                if (action === "hard")
+                {
+                    action = "map-select";
+                    vtd.settings.difficultyLevel = 3;
+                }
                 vtd.showScreen(action);
             }
         });

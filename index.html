@@ -12,7 +12,8 @@
             if (vtd.isStandalone()) {
                 vtd.load("scripts/screen.splash.js");
                 vtd.load("scripts/screen.main-menu.js");
-                vtd.load("scripts/screen.difficulty.js", vtd.setup);
+                vtd.load("scripts/screen.difficulty.js");
+                vtd.load("scripts/screen.map-select.js", vtd.setup);
             } else {
                 vtd.load("scripts/screen.install.js", vtd.setup);
             }
@@ -45,6 +46,13 @@
                 <li><button name="easy" onclick="">Easy</button>
                 <li><button name="medium" onclick="">Medium</button>
                 <li><button name="hard" onclick="">Hard</button>
+            </ul>
+        </div>
+        <div class="screen" id="map-select">
+            <h2 class="logo"> Vietnam Tower <br /> Defense</h2>
+            <ul class="menu">
+                <li><button name="map1" onclick="">Map 1</button>
+            </ul>
         </div>
 
         <!--<div class="screen" id="map-select">

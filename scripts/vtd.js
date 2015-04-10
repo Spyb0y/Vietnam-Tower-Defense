@@ -1,9 +1,7 @@
 var vtd = (function() {
-    /*var settings = {
-        rows : 8,
-        cols : 8,
+    var settings = {
+        difficultyLevel : 1,
         baseScore : 100,
-        numJewelTypes : 7,
         controls : {
             // keyboard
             KEY_UP : "moveUp",
@@ -22,7 +20,7 @@ var vtd = (function() {
             LEFT_STICK_LEFT: "moveLeft",
             LEFT_STICK_RIGHT: "moveRight"
         }
-    };*/
+    };
 
     var scriptQueue = [],
         numResourcesLoaded = 0,
@@ -143,7 +141,7 @@ var vtd = (function() {
         load: load,
         setup: setup,
         showScreen : showScreen,
-        //settings: settings,
+        settings: settings,
         screens: {}
     };
 })();
