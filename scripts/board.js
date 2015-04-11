@@ -1,47 +1,49 @@
 ﻿vtd.board = (function () {
     var settings,
-        jewels,
-        cols,
-        rows,
-        baseScore,
-        numJewelTypes,
         mode,
         currWave,
         maxWaves,
         startMoney;
 
-    //function to set the mode difficulty
-    function setMode(mode)
+    //function to set variables based on mode
+    function seVariables(mode)
     {
         switch(mode)
         {
             case "easy":
                 {
                     mode = "easy";
+                    maxWaves = 20;
                     break;
                 }
             case "medium":
                 {
                     mode = "normal";
+                    maxWaves = 25;
                     break;
                 }
             case "hard":
                 {
                     mode = "hard";
+                    maxWaves = 35;
                     break;
                 }
         }
-        this.mode = mode;
-        console.log(this.mode);
+        vtd.board.mode = mode;
+        vtd.board.maxWaves = maxWaves;
+       
     }
+
+
     function initialize(callback) {
         settings = vtd.settings;
-        
+           
 
     }
     return {
-        setMode: setMode,
+        seVariables: seVariables,
         initialize: initialize
     };
+
 })();
 
