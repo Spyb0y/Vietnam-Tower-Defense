@@ -1,25 +1,14 @@
-var vtd = (function() {
+var vtd = (function () {
+
     var settings = {
-        difficultyLevel : 1,
-        baseScore : 100,
-        controls : {
-            // keyboard
-            KEY_UP : "moveUp",
-            KEY_LEFT : "moveLeft",
-            KEY_DOWN : "moveDown",
-            KEY_RIGHT : "moveRight",
-            KEY_ENTER : "selectJewel",
-            KEY_SPACE : "selectJewel",
-            // mouse and touch
-            CLICK : "selectJewel",
-            TOUCH : "selectJewel",
-            // gamepad
-            BUTTON_A: "selectJewel",
-            LEFT_STICK_UP: "moveUp",
-            LEFT_STICK_DOWN: "moveDown",
-            LEFT_STICK_LEFT: "moveLeft",
-            LEFT_STICK_RIGHT: "moveRight"
+        
+         controls : {
+             //Keyboard
+             P: "pause",
+             //Mouse
+             CLICK : "select"
         }
+        
     };
 
     var scriptQueue = [],

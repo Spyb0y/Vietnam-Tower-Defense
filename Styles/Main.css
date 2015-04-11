@@ -89,10 +89,11 @@ ul.menu li button:active {
     background : rgb(30,40,0);
 }
 /*Map Selection*/
-.screen button
+#map-select button
 {
     background-image: url(../Assets/map.jpg);
-    width : 21em;
-    height : 13em;
+    width : 10em;
+    height : 7em;
     padding-bottom: 1em;
+    color: black;
 }
