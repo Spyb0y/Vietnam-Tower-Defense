@@ -1,14 +1,14 @@
-﻿var jewel = {};
+﻿var vtd = {};
 
 importScripts("board.js");
 
 addEventListener("message", function (event) {
-    var board = jewel.board,
+    var board = vtd.board,
         message = event.data;
 
     switch (message.command) {
         case "initialize":
-            jewel.settings = message.data;
+            vtd.settings = message.data;
             board.initialize(callback);
             break;
         case "swap":
@@ -26,7 +26,7 @@ addEventListener("message", function (event) {
         postMessage({
             id: message.id,
             data: data,
-            jewels: board.getBoard()
+            vtd: board.getBoard()
         });
     }
 

@@ -1,4 +1,4 @@
-﻿jewel.board = (function () {
+﻿vtd.board = (function () {
     var worker,
         rows, cols,
         jewels,
@@ -6,13 +6,13 @@
         callbacks;
 
     function initialize(callback) {
-        rows = jewel.settings.rows;
-        cols = jewel.settings.cols;
+        rows = vtd.settings.rows;
+        cols = vtd.settings.cols;
         messageCount = 0;
         callbacks = [];
         worker = new Worker("scripts/board.worker.js");
-        jewel.dom.bind(worker, "message", messageHandler);
-        post("initialize", jewel.settings, callback);
+        vtd.dom.bind(worker, "message", messageHandler);
+        post("initialize", vtd.settings, callback);
     }
 
     function post(command, data, callback) {

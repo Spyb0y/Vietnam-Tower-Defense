@@ -10,12 +10,19 @@
         window.addEventListener("load", function () {
             vtd.load("scripts/dom.js");
             if (vtd.isStandalone()) {
-                vtd.load("scripts/screen.splash.js");
+                vtd.load("scripts/screen.splash.js", vtd.setup());
                 vtd.load("scripts/screen.main-menu.js");
                 vtd.load("scripts/screen.difficulty.js");
                 vtd.load("scripts/screen.map-select.js");
+                if (vtd.hasWebWorkers()) {
+                    vtd.preload("scripts/board.worker.js");
+                    vtd.load("scripts/board.worker-interface.js");
+                } else {
+                    vtd.load("scripts/board.js");
+                }
                 vtd.load("scripts/screen.game-screen.js");
                 vtd.load("scripts/display.canvas.js", vtd.setup);
+                vtd.load("scripts/canvas.display.js");
                 vtd.load("scripts/board.js");
             } else {
                 vtd.load("scripts/screen.install.js", vtd.setup);
@@ -49,9 +56,9 @@
         <div class="screen" id="difficulty">
             <h2 class="logo"> Vietnam Tower <br /> Defense</h2>
             <ul class="menu">
-                <li><button name="easy"onclick="vtd.board.seVariables(&quot;easy&quot;)"  >Easy</button>
-                <li><button name="medium" onclick="vtd.board.seVariables(&quot;medium&quot;)">Medium</button>
-                <li><button name="hard" onclick="vtd.board.seVariables(&quot;hard&quot;)">Hard</button>
+                <li><button name="easy">Easy</button>
+                <li><button name="medium">Medium</button>
+                <li><button name="hard">Hard</button>
             </ul>
         </div>
         <div class="screen" id="map-select">

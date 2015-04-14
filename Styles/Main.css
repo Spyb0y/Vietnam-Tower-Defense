@@ -119,7 +119,7 @@ ul.menu li button:active {
 /*Map Selection*/
 #map-select button
 {
-    background-image: url(../Assets/demoMap.png);
+    background-image: url(../images/demoMap.png);
     width : 10em;
     height : 7em;
     padding-bottom: 1em;

@@ -19,7 +19,7 @@
         
         
            
-
+        callback();
     }
     return {
         initialize: initialize

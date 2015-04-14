@@ -5,6 +5,8 @@
     function startGame() {
         var board = vtd.board,
             display = vtd.display;
+
+
         board.initialize(function () {
             display.initialize(function () {
                 display.redraw(board.getBoard(), function () {
