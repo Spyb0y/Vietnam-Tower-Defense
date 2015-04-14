@@ -1,6 +1,7 @@
 var vtd = (function () {
 
     var settings = {
+        currWave: 1,
         
          controls : {
              //Keyboard
@@ -38,7 +39,7 @@ var vtd = (function () {
             executeRunning = false;
         }
     }
-
+    
     function getLoadProgress() {
         return numResourcesLoaded / numResources;
     }

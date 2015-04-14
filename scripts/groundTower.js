@@ -1,14 +1,14 @@
 ﻿vtd.groundTower = (function () {
 
     var properties = {
+        level : 0,
         range: 0,
-        attackSpeed: 0,
-        cost: 0,
+        attackSpeed: 1,
+        cost: 100 + (2 * level)
     };
 
-    attack(enemy)
-    {
+    attack = function (enemy) {
 
-    }
+    };
 
 })();
