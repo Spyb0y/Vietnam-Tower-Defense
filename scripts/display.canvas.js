@@ -1,6 +1,5 @@
-vtd.screens["splash-screen"] = (function() {
+﻿vtd.screens["splash-screen"] = (function() {
     var firstRun = true;
-
 
     function checkProgress() {
         var $ = vtd.dom.$,
@@ -17,15 +16,15 @@ vtd.screens["splash-screen"] = (function() {
         var dom = vtd.dom,
             $ = dom.$,
             screen = $("#splash-screen")[0];
-        $(".continue", screen)[0].style.display = "block";
-        dom.bind(screen, "click", function () {
+        $(".continue",screen)[0].style.display = "block";
+        dom.bind(screen, "click", function() {
             vtd.showScreen("main-menu");
         });
     }
 
     function run() {
         if (firstRun) {
-            setup();
+            checkProgress();
             firstRun = false;
         }
     }

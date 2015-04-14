@@ -44,9 +44,9 @@
 
     function setup() {
         var dom = vtd.dom;
-        dom.bind("footer button.exit", "click", exitGame);
-        dom.bind("footer button.pause", "click", pauseGame);
-        dom.bind(".pause-overlay", "click", resumeGame);
+        //dom.bind("footer button.exit", "click", exitGame);
+        //dom.bind("footer button.pause", "click", pauseGame);
+        //dom.bind(".pause-overlay", "click", resumeGame);
     }
 
     function run() {
