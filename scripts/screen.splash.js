@@ -1,6 +1,5 @@
-vtd.screens["splash-screen"] = (function() {
+vtd.screens["splash-screen"] = (function () {
     var firstRun = true;
-
 
     function checkProgress() {
         var $ = vtd.dom.$,
@@ -25,12 +24,12 @@ vtd.screens["splash-screen"] = (function() {
 
     function run() {
         if (firstRun) {
-            setup();
+            checkProgress();
             firstRun = false;
         }
     }
 
     return {
-        run : run
+        run: run
     };
 })();

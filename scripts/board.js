@@ -21,8 +21,18 @@
            
         callback();
     }
+
+    function print() {
+        var str = "";
+       
+            str += "\r\n";
+        
+        console.log(str);
+}
+
     return {
-        initialize: initialize
+        initialize: initialize,
+        print : print
     };
 
 })();
