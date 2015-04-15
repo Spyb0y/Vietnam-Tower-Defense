@@ -18,9 +18,21 @@
         return background;
     }
 
+    function createEnemy()//temp function to test pathing
+    {
+
+        var context = document.getElementById("mycanvas"),
+        ctx = context.getContext("2d"),
+        img = new Image();
+        img.src = 'Assets/Enemies/Tank.png';
+
+        ctx.drawImage(img, 5, 60, 50, 25);
+
+    }
+
     function setup() {
         createBackground();
-
+        createEnemy();
        
 
     }
