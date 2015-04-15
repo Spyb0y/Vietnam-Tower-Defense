@@ -12,7 +12,7 @@
 
         
 
-    function initialize(mode, callback) {
+    function initialize(callback) {
         settings = vtd.settings;
         currWave = vtd.currWave;
         
