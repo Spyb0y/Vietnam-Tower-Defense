@@ -2,6 +2,7 @@ var vtd = (function () {
 
     var settings = {
         currWave: 1,
+        currGold: 0,
         
          controls : {
              //Keyboard

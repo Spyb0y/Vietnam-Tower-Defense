@@ -2,6 +2,7 @@
     var settings,
             mode,
             currWave,
+            currGold,
             maxWaves,
             hpMultiplier,
             scoreMultiplier,
@@ -15,6 +16,7 @@
     function initialize(callback) {
         settings = vtd.settings;
         currWave = vtd.currWave;
+        currGold = vtd.currGold;
         
         
         

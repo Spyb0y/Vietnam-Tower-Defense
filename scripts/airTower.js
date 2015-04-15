@@ -25,9 +25,14 @@
 
     function upgrade(tower) {
         upgradingTower = tower.properties;
-        upgradingTower.level++;
-        upgradingTower.damage = upgradingTower.dmamge * 2;
-        //player money = player money - upgradingTower.cost;
+        if (uppgradingTower.cost <= currGold) {
+            upgradingTower.level++;
+            upgradingTower.damage = upgradingTower.dmamge * 2;
+            board.currGold = board.currGold - upgradingTower.cost;
+        }
+        else {
+            return;
+        }
     }
 
 
