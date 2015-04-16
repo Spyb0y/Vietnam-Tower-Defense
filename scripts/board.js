@@ -29,6 +29,7 @@
     {
         var x, y;
 
+        towerPositions = [];
         for(x = 0; x < 15; x++)
         {
             towerPositions[x] = [];
