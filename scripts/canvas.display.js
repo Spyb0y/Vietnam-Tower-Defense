@@ -1,4 +1,7 @@
 ﻿vtd.display = (function () {
+
+    const FRAME_RATE = 20;
+
     var canvas, ctx,
         firstRun = true,
         paused;
@@ -7,7 +10,7 @@
         var background = document.getElementById("mycanvas"),
             bgctx = background.getContext("2d"),
             img = new Image();
-        img.src = 'images/map.png';
+            img.src = 'images/map.png';
 
         vtd.dom.addClass(background, "background");
        
@@ -20,13 +23,16 @@
 
     function createEnemy()//temp function to test pathing
     {
+        var checkPoints = [];
 
-        var context = document.getElementById("mycanvas"),
-        ctx = context.getContext("2d"),
-        img = new Image();
-        img.src = 'Assets/Enemies/Tank.png';
+        var checkpoint1 = { x: 50, y: 25 };
+        checkPoints.push(checkpoint1);
 
-        ctx.drawImage(img, 5, 60, 50, 25);
+        for( i = 0; i < checkPoints.length; i++)
+        {
+            drawEnemies(checkPoints[i].x, checkPoints[i].y)
+        }
+       
 
     }
 
@@ -71,10 +77,23 @@
         ctx.drawImage(img, x, y, 50, 25);
     }
 
+    function drawEnemies(x,y)
+    {
+        var context = document.getElementById("mycanvas"),
+            ctx = context.getContext("2d"),
+         img = new Image();
+        img.src = 'Assets/Enemies/Tank.png';
+
+        ctx.drawImage(img, 5, 60, x, y);
+    }
+
+
+ 
     function setup() {
         createBackground();
         createEnemy();
         createTowers();
+        
        
 
     }
@@ -93,7 +112,8 @@
         var x, y;
        
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+        createBackground()
+
         
         callback();
     }
