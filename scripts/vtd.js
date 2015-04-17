@@ -3,12 +3,14 @@ var vtd = (function () {
     var settings = {
         currWave: 1,
         currGold: 0,
+        cols: 15,
+        rows: 15,
         
          controls : {
              //Keyboard
              P: "pause",
              //Mouse
-             CLICK : "select"
+             CLICK : "selectTower"
         }
         
     };
