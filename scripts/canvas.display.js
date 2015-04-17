@@ -8,6 +8,9 @@
         firstRun = true,
         paused;
 
+    var background = document.getElementById("mycanvas"),
+           bgctx = background.getContext("2d");
+
     function createBackground() {
         var background = document.getElementById("mycanvas"),
             bgctx = background.getContext("2d"),
@@ -94,7 +97,7 @@
     function setup() {
         cols = vtd.settings.cols;
         rows = vtd.settings.rows;
-        towerSize = rect.width / cols;
+        //towerSize = rect.width / cols;
 
         createBackground();
         createEnemy();
@@ -120,8 +123,10 @@
     function redraw(callback) {
         var x, y;
        
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        bgctx.clearRect(0, 0, background.width, background.height);
         createBackground()
+        createEnemy();
+        createTowers();
 
         
         callback();
