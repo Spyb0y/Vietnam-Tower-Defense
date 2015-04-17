@@ -7,7 +7,7 @@
             hpMultiplier,
             scoreMultiplier,
             playerHealth,
-            towerPositions,
+            globalTowerPositions,
             startGold;
     
            
@@ -27,20 +27,43 @@
 
     function fillBoard()
     {
-        var x, y;
+        var towerPositions = [];
 
-        towerPositions = [];
-        for(x = 0; x < 15; x++)
-        {
-            towerPositions[x] = [];
-            for(y = 0; y < 13; y++)
-            {
-                towerPositions[x] [y] = 1;
-                //if(x == 1 && y == 2 || x == 1 && y == 3 || x == 1 && y == 4 || x == 1 && y == 5 || x == 1 && y == 6 || x == 2 && y == 11 || x == 2 && y == 12 || x == 2 && y == 13 || x == 2 && y == 14 ||
-                   // x == 2 && y == 15 ||x == 3 && y == 2 || x == 3 && y == 3 || x == 3 && y == 4 || x == 3 && y == 6 || x == 3 && y == 11 || x == 4 && y == 4 || x == 4 && y == 6 || x == 4 && y == 11 ||
-                   // x == 4 && y == 13 || x == 4 && y == 14 || x == 4 && y == 15 || x == 5 && y == 1 || x == 1 && y == 1 || x == 1 && y == 1 || x == 1 && y == 1 || x == 1 && y == 1 || x == 1 && y == 1 ||)
-            }
-        }
+        var mapWidth = 700//background.width;
+        var boxSize = mapWidth / cols;
+
+        var pos1 = { x: (boxSize * 1) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos1;
+        var pos2 = { x: (boxSize * 2) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos2;
+        var pos3 = { x: (boxSize * 3) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos3;
+        var pos4 = { x: (boxSize * 4) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos4;
+        var pos5 = { x: (boxSize * 5) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos5;
+        var pos6 = { x: (boxSize * 6) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos6;
+        var pos7 = { x: (boxSize * 7) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos7;
+        var pos8 = { x: (boxSize * 8) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos8;
+        var pos9 = { x: (boxSize * 9) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos9;
+        var pos10 = { x: (boxSize * 10) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos10;
+        var pos11 = { x: (boxSize * 11) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos11;
+        var pos12 = { x: (boxSize * 12) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos12;
+        var pos13 = { x: (boxSize * 13) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos13;
+        var pos14 = { x: (boxSize * 14) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos14;
+        var pos15 = { x: (boxSize * 15) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos15;
+
+        globalTowerPositions = towerPositions;
         
     }
 

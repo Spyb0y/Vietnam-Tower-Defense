@@ -1,5 +1,6 @@
 ﻿vtd.display = (function () {
-
+    var settings,
+        globalTowerPositions;
     const FRAME_RATE = 20;
 
     var canvas, ctx,
@@ -41,6 +42,16 @@
 
     }
 
+    function GetGlobalTowerPositions()
+    {
+        return globalTowerPositions;
+    }
+
+    function SetGlobalTowerPositions(towerPositionsArray)
+    {
+        globalTowerPositions = towerPositionsArray;
+    }
+
     function createTowers()
     {
         var towerPositions = [];
@@ -78,6 +89,8 @@
         towerPositions[towerPositions.length] = pos14;
         var pos15 = { x: (boxSize * 15) - boxSize, y: 10 };
         towerPositions[towerPositions.length] = pos15;
+
+        SetGlobalTowerPositions(towerPositions);
 
         for(i = 0; i < towerPositions.length; i++)
         {
@@ -158,7 +171,8 @@
     return {
 
         initialize : initialize,
-        redraw: redraw
+        redraw: redraw,
+        GetGlobalTowerPositions: GetGlobalTowerPositions
     };
             
 })();
