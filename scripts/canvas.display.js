@@ -3,6 +3,8 @@
     const FRAME_RATE = 20;
 
     var canvas, ctx,
+        cols, rows,
+        towerSize,
         firstRun = true,
         paused;
 
@@ -90,6 +92,10 @@
 
  
     function setup() {
+        cols = vtd.settings.cols;
+        rows = vtd.settings.rows;
+        towerSize = rect.width / cols;
+
         createBackground();
         createEnemy();
         createTowers();
@@ -101,6 +107,9 @@
         paused = false;
         if (firstRun) {
             setup();
+            towerLocationSprite = new Image();
+            towerLocationSprite.addEventListener("load", callback, false);
+            towerLocationSprite.src = "Assets/Towers/sign.png";
            
             firstRun = false;
         } else {

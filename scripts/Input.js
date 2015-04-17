@@ -31,7 +31,7 @@
         relY = click.clientY - rect.top;
         // jewel coordinates
         towerX = Math.floor(relX / rect.width * settings.cols);
-        towerY = Math.floor(relY / rect.height * settings.rows);
+        towerY = Math.floor(relY / /*rect.height*/600 * settings.rows);
         // trigger functions bound to action
         trigger(action, towerX, towerY);
         // prevent default click behavior
@@ -50,7 +50,7 @@
         // trigger a game action
         var handlers = inputHandlers[action],
             args = Array.prototype.slice.call(arguments, 1);
-        consloe.log("Game action: " + action);
+        console.log("Game action: " + action);
         if (handlers) {
             for (var i = 0; i < handlers.length;i++)
             {
