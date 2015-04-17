@@ -11,7 +11,7 @@
     position : absolute;
     left : 0;
     top : 0;
-    width : 17.5em;
+    width : 17em;
     height : 15em;
     font-family : Geo;
     color : rgb(200,200,100);
@@ -125,6 +125,4 @@ ul.menu li button:active {
     padding-bottom: 1em;
     color: black;
 }
-
-
 
