@@ -24,6 +24,7 @@
                 vtd.load("scripts/canvas.display.js");
                 vtd.load("scripts/board.js");
                 vtd.load("scripts/input.js");
+                vtd.load("scripts/music.js");
             } else {
                 vtd.load("scripts/screen.install.js", vtd.setup);
             }
@@ -31,10 +32,16 @@
     </script>
 </head>
 <body>
-
-    
+   
     <div id="game">
+
+        <audio id="gamemusic">
+            <source src="Assets/Music/Gamemusic.mp3" />
+        </audio>
+              
+        
         <div class="screen" id="splash-screen">
+            
             <h1 class="logo">Veitnam Tower Defense</h1>
             <div class="progress">
                 <div class="indicator"></div>
@@ -42,6 +49,7 @@
             <span class="continue">Click to continue</span>
         </div>
         <div class="screen" id="main-menu">
+            
             <h2 class="logo"> Vietnam Tower <br /> Defense</h2>
             <ul class="menu">
                 <li><button name="difficulty" onclick="">Play</button> 
@@ -64,7 +72,7 @@
         <div class="screen" id="map-select">
             <h2 class="logo"> Vietnam Tower <br /> Defense</h2>
             <ul class="menu">
-                <li><button name="game-screen" onclick="">Map 1</button>
+                <li><button name="game-screen" onclick="ChangeAudio()">Map 1</button>
             </ul>
         </div>
         <div class="screen" id="game-screen">
@@ -78,6 +86,6 @@
         <div class="screen" id="score-screen"></div>
     </div>  
   
-
+   
 </body>
 </html>
