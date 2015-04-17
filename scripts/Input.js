@@ -54,7 +54,8 @@
         if (handlers) {
             for (var i = 0; i < handlers.length;i++)
             {
-                handlers[i].apply(null, arge);
+                //handlers[i].apply(null, arge);
+                break;
             }
         }
     }
