@@ -1,5 +1,6 @@
 ﻿vtd.display = (function () {
-
+    var settings,
+        globalTowerPositions;
     const FRAME_RATE = 20;
 
     var canvas, ctx,
@@ -41,20 +42,55 @@
 
     }
 
+    function GetGlobalTowerPositions()
+    {
+        return globalTowerPositions;
+    }
+
+    function SetGlobalTowerPositions(towerPositionsArray)
+    {
+        globalTowerPositions = towerPositionsArray;
+    }
+
     function createTowers()
     {
         var towerPositions = [];
 
-        var pos1 = { x: 10, y: 10 };
+        var mapWidth = 700//background.width;
+        var boxSize = mapWidth / cols;
+
+        var pos1 = { x: (boxSize * 1) - boxSize , y: 10 };
         towerPositions[towerPositions.length] = pos1;
-        var pos2 = { x: 60, y: 10 };
+        var pos2 = { x: (boxSize * 2) - boxSize, y: 10 };
         towerPositions[towerPositions.length] = pos2;
-        var pos3 = { x: 110, y: 10 };
+        var pos3 = { x: (boxSize * 3) - boxSize, y: 10 };
         towerPositions[towerPositions.length] = pos3;
-        var pos4 = { x: 160, y: 10 };
+        var pos4 = { x: (boxSize * 4) - boxSize, y: 10 };
         towerPositions[towerPositions.length] = pos4;
-        var pos5 = { x: 210, y: 10 };
+        var pos5 = { x: (boxSize * 5) - boxSize, y: 10 };
         towerPositions[towerPositions.length] = pos5;
+        var pos6 = { x: (boxSize * 6) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos6;
+        var pos7 = { x: (boxSize * 7) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos7;
+        var pos8 = { x: (boxSize * 8) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos8;
+        var pos9 = { x: (boxSize * 9) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos9;
+        var pos10 = { x: (boxSize * 10) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos10;
+        var pos11 = { x: (boxSize * 11) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos11;
+        var pos12 = { x: (boxSize * 12) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos12;
+        var pos13 = { x: (boxSize * 13) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos13;
+        var pos14 = { x: (boxSize * 14) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos14;
+        var pos15 = { x: (boxSize * 15) - boxSize, y: 10 };
+        towerPositions[towerPositions.length] = pos15;
+
+        SetGlobalTowerPositions(towerPositions);
 
         for(i = 0; i < towerPositions.length; i++)
         {
@@ -97,7 +133,7 @@
     function setup() {
         cols = vtd.settings.cols;
         rows = vtd.settings.rows;
-        //towerSize = rect.width / cols;
+        var towerSize = 600 / cols;
 
         createBackground();
         createEnemy();
@@ -135,7 +171,8 @@
     return {
 
         initialize : initialize,
-        redraw: redraw
+        redraw: redraw,
+        GetGlobalTowerPositions: GetGlobalTowerPositions
     };
             
 })();

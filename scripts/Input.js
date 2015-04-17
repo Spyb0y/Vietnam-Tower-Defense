@@ -1,5 +1,6 @@
 ﻿vtd.input = (function () {
-    var inputHandlers;
+    var settings,
+        inputHandlers;
 
     function initialize() {
         var dom = vtd.dom,
@@ -29,9 +30,13 @@
         // click position relative to board
         relX = click.clientX - rect.left;
         relY = click.clientY - rect.top;
-        // jewel coordinates
+        // tower coordinates
         towerX = Math.floor(relX / rect.width * settings.cols);
         towerY = Math.floor(relY / /*rect.height*/600 * settings.rows);
+        //checks to make sure there is a tower in that location
+        var towerPositions = [];
+        towerPositions = vtd.display.GetGlobalTowerPositions();
+
         // trigger functions bound to action
         trigger(action, towerX, towerY);
         // prevent default click behavior
@@ -46,7 +51,7 @@
         inputHandlers[action].push(handler);
     }
 
-    function trigger(action) {
+    function trigger(action, towerX, towerY) {
         // trigger a game action
         var handlers = inputHandlers[action],
             args = Array.prototype.slice.call(arguments, 1);
@@ -54,7 +59,9 @@
         if (handlers) {
             for (var i = 0; i < handlers.length;i++)
             {
-                handlers[i].apply(null, arge);
+                console.log("Tower seleceted at x: " + towerX + " y: " + towerY);
+                handlers[i].apply(null, args);
+                break;
             }
         }
     }
